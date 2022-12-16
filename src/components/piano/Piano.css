@@ -1,0 +1,92 @@
+.piano{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #151515;
+    border-radius: 10px;
+    padding: 20px 40px 40px;
+}
+.piano .piano-top{
+    color: #bbb;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.piano-top .piano-title{
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.input-group span{
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.input-group .input[type="range"]{
+    accent-color: #fff;
+}
+.input-group .input[type="checkbox"]{
+    appearance: none;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #4b4b4b;
+    position: relative;
+}
+.input-group .input[type="checkbox"]::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #8c8c8c;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.5s ease;
+}
+.input-group .input[type="checkbox"]:checked::before{
+    left: 35px;
+}
+.piano .piano-board{
+    display: flex;
+}
+.piano-board .key{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaa;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.piano-board .white{
+    width: 80px;
+    height: 250px;
+    background: linear-gradient(#fff 96%,#eee 4%);
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.piano-board .white:active{
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom,#eee,#fff);
+}
+.piano-board .black{
+    width: 40px;
+    height: 150px;
+    background: linear-gradient(#333,#000);
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px -20px;
+    z-index: 10;
+}
+.piano-board .black:active{
+    box-shadow: inset -5px 5px 20px rgba(255,255,255,0.1);
+    background: linear-gradient(to bottom,#000,#333);
+}
